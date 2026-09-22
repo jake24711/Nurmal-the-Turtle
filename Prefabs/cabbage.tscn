@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cstk47ttjpmme"]
+
+[ext_resource type="Texture2D" uid="uid://b78tauc73kump" path="res://kenney_food-kit/Previews/cabbage.png" id="1_6qr07"]
+[ext_resource type="Script" uid="uid://d0xcsu3u3jus6" path="res://Prefabs/cabbage.gd" id="1_m11o4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m11o4"]
+radius = 21.0
+
+[node name="cabbage" type="Area2D" unique_id=1764731304]
+script = ExtResource("1_m11o4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=739440195]
+texture = ExtResource("1_6qr07")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=291158194]
+shape = SubResource("CircleShape2D_m11o4")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
