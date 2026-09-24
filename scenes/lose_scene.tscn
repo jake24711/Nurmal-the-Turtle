@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://q7idbb35oibm"]
 
-[ext_resource type="Script" uid="uid://c4owace1m5v1l" path="res://scenes/lose_scene.gd" id="1_6vthu"]
+[ext_resource type="Script" uid="uid://cibd4vioirpf8" path="res://Scripts/lose_scene.gd" id="1_6vthu"]
 [ext_resource type="Theme" uid="uid://bx3y8d6roqy2" path="res://new_theme.tres" id="1_68m3b"]
 
 [node name="lose_scene" type="Node2D" unique_id=1659462503]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cstk47ttjpmme"]
 
 [ext_resource type="Texture2D" uid="uid://b78tauc73kump" path="res://kenney_food-kit/Previews/cabbage.png" id="1_6qr07"]
-[ext_resource type="Script" uid="uid://d0xcsu3u3jus6" path="res://Prefabs/cabbage.gd" id="1_m11o4"]
+[ext_resource type="Script" uid="uid://d0xcsu3u3jus6" path="res://Scripts/cabbage.gd" id="1_m11o4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m11o4"]
 radius = 21.0

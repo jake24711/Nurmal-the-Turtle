@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://g6yt5weay463"]
 
-[ext_resource type="Script" uid="uid://slef56slq0xd" path="res://Prefabs/enemy.gd" id="1_lgw76"]
+[ext_resource type="Script" uid="uid://slef56slq0xd" path="res://Scripts/enemy.gd" id="1_lgw76"]
 [ext_resource type="Texture2D" uid="uid://fq8m8q55dnyf" path="res://kenney_food-kit/Previews/can.png" id="2_lgw76"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lgw76"]

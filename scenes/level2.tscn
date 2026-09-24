@@ -1,11 +1,12 @@
-[gd_scene format=3 uid="uid://cfopmqntodipk"]
+[gd_scene format=3 uid="uid://ski2im4xd0cj"]
 
-[ext_resource type="PackedScene" uid="uid://cnh1ilncgfk1u" path="res://Prefabs/player.tscn" id="1_lnu2h"]
-[ext_resource type="Script" uid="uid://dawuh3ouokiio" path="res://scenes/ui.gd" id="3_lnu2h"]
-[ext_resource type="PackedScene" uid="uid://cstk47ttjpmme" path="res://Prefabs/cabbage.tscn" id="4_iywne"]
-[ext_resource type="PackedScene" uid="uid://g6yt5weay463" path="res://Prefabs/enemy.tscn" id="4_lbhrr"]
-[ext_resource type="Shader" uid="uid://cpmxglbwnxuuq" path="res://scenes/water.gdshader" id="5_iywne"]
-[ext_resource type="Script" uid="uid://yf3oksub3q03" path="res://scenes/camera_2d.gd" id="6_p57ef"]
+[ext_resource type="Script" uid="uid://bjee2lgpk5j6e" path="res://Scripts/ui.gd" id="1_6ep0u"]
+[ext_resource type="Shader" uid="uid://cpmxglbwnxuuq" path="res://scenes/water.gdshader" id="2_hrcei"]
+[ext_resource type="PackedScene" uid="uid://cnh1ilncgfk1u" path="res://Prefabs/player.tscn" id="3_xa7n4"]
+[ext_resource type="PackedScene" uid="uid://cstk47ttjpmme" path="res://Prefabs/cabbage.tscn" id="4_bo4dx"]
+[ext_resource type="PackedScene" uid="uid://g6yt5weay463" path="res://Prefabs/enemy.tscn" id="5_76toy"]
+[ext_resource type="Script" uid="uid://yf3oksub3q03" path="res://Scripts/camera_2d.gd" id="6_8g4ke"]
+[ext_resource type="PackedScene" uid="uid://utjiyd3x5arl" path="res://Prefabs/shark.tscn" id="7_56gwk"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_iywne"]
 
@@ -20,7 +21,7 @@ noise = SubResource("FastNoiseLite_u5sy4")
 seamless = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_p57ef"]
-shader = ExtResource("5_iywne")
+shader = ExtResource("2_hrcei")
 shader_parameter/waterNoise = SubResource("NoiseTexture2D_gee14")
 shader_parameter/waterDistortionNoise = SubResource("NoiseTexture2D_p57ef")
 shader_parameter/waterColor = Color(0.2585908, 0.49682647, 0.9113628, 1)
@@ -60,7 +61,7 @@ grow_vertical = 2
 color = Color(6.141484e-05, 0.50224715, 0.94976324, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1335831886]
-script = ExtResource("3_lnu2h")
+script = ExtResource("1_6ep0u")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=955589603]
 material = SubResource("ShaderMaterial_p57ef")
@@ -101,53 +102,57 @@ grow_horizontal = 0
 text = "Cabbage: Good
 Cans: Bad"
 
-[node name="player" parent="." unique_id=1455901684 instance=ExtResource("1_lnu2h")]
+[node name="player" parent="." unique_id=1455901684 instance=ExtResource("3_xa7n4")]
 position = Vector2(1054, 556)
 
-[node name="cabbage" parent="." unique_id=1764731304 instance=ExtResource("4_iywne")]
+[node name="cabbage" parent="." unique_id=1764731304 instance=ExtResource("4_bo4dx")]
 position = Vector2(143, 600)
 
-[node name="cabbage2" parent="." unique_id=757100623 instance=ExtResource("4_iywne")]
+[node name="cabbage2" parent="." unique_id=757100623 instance=ExtResource("4_bo4dx")]
 position = Vector2(365, 443)
 
-[node name="cabbage3" parent="." unique_id=1405143200 instance=ExtResource("4_iywne")]
+[node name="cabbage3" parent="." unique_id=1405143200 instance=ExtResource("4_bo4dx")]
 position = Vector2(632, 530)
 
-[node name="cabbage4" parent="." unique_id=1980587423 instance=ExtResource("4_iywne")]
+[node name="cabbage4" parent="." unique_id=1980587423 instance=ExtResource("4_bo4dx")]
 position = Vector2(786, 171)
 
-[node name="cabbage5" parent="." unique_id=1887080083 instance=ExtResource("4_iywne")]
+[node name="cabbage5" parent="." unique_id=1887080083 instance=ExtResource("4_bo4dx")]
 position = Vector2(1044, 347)
 
-[node name="cabbage6" parent="." unique_id=734689240 instance=ExtResource("4_iywne")]
+[node name="cabbage6" parent="." unique_id=734689240 instance=ExtResource("4_bo4dx")]
 position = Vector2(614, 275)
 
-[node name="enemy" parent="." unique_id=520241183 instance=ExtResource("4_lbhrr")]
+[node name="enemy" parent="." unique_id=520241183 instance=ExtResource("5_76toy")]
 position = Vector2(688, 362)
 
-[node name="enemy2" parent="." unique_id=1043420784 instance=ExtResource("4_lbhrr")]
+[node name="enemy2" parent="." unique_id=1043420784 instance=ExtResource("5_76toy")]
 position = Vector2(955, 231)
 
-[node name="enemy3" parent="." unique_id=1014916680 instance=ExtResource("4_lbhrr")]
+[node name="enemy3" parent="." unique_id=1014916680 instance=ExtResource("5_76toy")]
 position = Vector2(819, 506)
 
-[node name="enemy4" parent="." unique_id=179709233 instance=ExtResource("4_lbhrr")]
+[node name="enemy4" parent="." unique_id=179709233 instance=ExtResource("5_76toy")]
 position = Vector2(207, 351)
 
-[node name="enemy5" parent="." unique_id=1397038205 instance=ExtResource("4_lbhrr")]
+[node name="enemy5" parent="." unique_id=1397038205 instance=ExtResource("5_76toy")]
 position = Vector2(531, 130)
 
-[node name="enemy6" parent="." unique_id=193070399 instance=ExtResource("4_lbhrr")]
+[node name="enemy6" parent="." unique_id=193070399 instance=ExtResource("5_76toy")]
 position = Vector2(376, 586)
 
-[node name="cabbage7" parent="." unique_id=1851827884 instance=ExtResource("4_iywne")]
+[node name="cabbage7" parent="." unique_id=1851827884 instance=ExtResource("4_bo4dx")]
 position = Vector2(337, 170)
 
 [node name="Node2D2" type="Node2D" parent="." unique_id=1574866549]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=727298786]
 position = Vector2(571, 323)
-script = ExtResource("6_p57ef")
+script = ExtResource("6_8g4ke")
+
+[node name="Shark" parent="." unique_id=1730127278 node_paths=PackedStringArray("player") instance=ExtResource("7_56gwk")]
+position = Vector2(474, 321)
+player = NodePath("../player")
 
 [connection signal="area_entered" from="enemy" to="enemy" method="_on_area_entered"]
 [connection signal="area_entered" from="enemy2" to="enemy2" method="_on_area_entered"]

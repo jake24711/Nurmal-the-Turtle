@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://cfopmqntodipk"]
+
+[ext_resource type="PackedScene" uid="uid://cnh1ilncgfk1u" path="res://Prefabs/player.tscn" id="1_lnu2h"]
+[ext_resource type="Script" uid="uid://bjee2lgpk5j6e" path="res://Scripts/ui.gd" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://cstk47ttjpmme" path="res://Prefabs/cabbage.tscn" id="4_iywne"]
+[ext_resource type="PackedScene" uid="uid://g6yt5weay463" path="res://Prefabs/enemy.tscn" id="4_lbhrr"]
+[ext_resource type="Shader" uid="uid://cpmxglbwnxuuq" path="res://scenes/water.gdshader" id="5_iywne"]
+[ext_resource type="Script" uid="uid://yf3oksub3q03" path="res://Scripts/camera_2d.gd" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://utjiyd3x5arl" path="res://Prefabs/shark.tscn" id="7_u5sy4"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_iywne"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_p57ef"]
+noise = SubResource("FastNoiseLite_iywne")
+seamless = true
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_u5sy4"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_gee14"]
+noise = SubResource("FastNoiseLite_u5sy4")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p57ef"]
+shader = ExtResource("5_iywne")
+shader_parameter/waterNoise = SubResource("NoiseTexture2D_gee14")
+shader_parameter/waterDistortionNoise = SubResource("NoiseTexture2D_p57ef")
+shader_parameter/waterColor = Color(0.2585908, 0.49682647, 0.9113628, 1)
+shader_parameter/colorCorection = 0.1499999966472
+shader_parameter/distortionForce = 0.0430000020425
+shader_parameter/WDBrightness = 0.7500000111759
+shader_parameter/WDFreq = 0.35000000521540997
+shader_parameter/WDSize = 1.0000000298023402
+shader_parameter/WDSpeed = 4.4000000506640795
+shader_parameter/tiling = Vector2(1, 1)
+shader_parameter/offSetSpeed = Vector2(0.1, 0.1)
+shader_parameter/backGroundDirX = 0.01
+shader_parameter/backGroundDirY = 0.01
+
+[node name="game" type="Node2D" unique_id=680889834]
+
+[node name="Control" type="Control" parent="." unique_id=989774026]
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=78157572]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 546.0
+offset_top = 296.0
+offset_right = 599.0
+offset_bottom = 359.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(6.141484e-05, 0.50224715, 0.94976324, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1335831886]
+script = ExtResource("3_lnu2h")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=955589603]
+material = SubResource("ShaderMaterial_p57ef")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="growth_label" type="Label" parent="CanvasLayer" unique_id=854977327]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -38.0
+offset_right = 38.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Growth: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="deaths_label" type="Label" parent="CanvasLayer" unique_id=2065437224]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 40.0
+grow_vertical = 0
+text = "Deaths: 0"
+
+[node name="edible_label" type="Label" parent="CanvasLayer" unique_id=375544876]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -117.0
+offset_bottom = 49.0
+grow_horizontal = 0
+text = "Cabbage: Good
+Cans: Bad"
+
+[node name="player" parent="." unique_id=1455901684 instance=ExtResource("1_lnu2h")]
+position = Vector2(1054, 556)
+
+[node name="cabbage" parent="." unique_id=1764731304 instance=ExtResource("4_iywne")]
+position = Vector2(143, 600)
+
+[node name="cabbage2" parent="." unique_id=757100623 instance=ExtResource("4_iywne")]
+position = Vector2(365, 443)
+
+[node name="cabbage3" parent="." unique_id=1405143200 instance=ExtResource("4_iywne")]
+position = Vector2(632, 530)
+
+[node name="cabbage4" parent="." unique_id=1980587423 instance=ExtResource("4_iywne")]
+position = Vector2(786, 171)
+
+[node name="cabbage5" parent="." unique_id=1887080083 instance=ExtResource("4_iywne")]
+position = Vector2(1044, 347)
+
+[node name="cabbage6" parent="." unique_id=734689240 instance=ExtResource("4_iywne")]
+position = Vector2(614, 275)
+
+[node name="enemy" parent="." unique_id=520241183 instance=ExtResource("4_lbhrr")]
+position = Vector2(688, 362)
+
+[node name="enemy2" parent="." unique_id=1043420784 instance=ExtResource("4_lbhrr")]
+position = Vector2(955, 231)
+
+[node name="enemy3" parent="." unique_id=1014916680 instance=ExtResource("4_lbhrr")]
+position = Vector2(819, 506)
+
+[node name="enemy4" parent="." unique_id=179709233 instance=ExtResource("4_lbhrr")]
+position = Vector2(207, 351)
+
+[node name="enemy5" parent="." unique_id=1397038205 instance=ExtResource("4_lbhrr")]
+position = Vector2(531, 130)
+
+[node name="enemy6" parent="." unique_id=193070399 instance=ExtResource("4_lbhrr")]
+position = Vector2(376, 586)
+
+[node name="cabbage7" parent="." unique_id=1851827884 instance=ExtResource("4_iywne")]
+position = Vector2(337, 170)
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=1574866549]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=727298786]
+position = Vector2(571, 323)
+script = ExtResource("6_p57ef")
+
+[node name="Shark" parent="." unique_id=1730127278 node_paths=PackedStringArray("player") instance=ExtResource("7_u5sy4")]
+position = Vector2(474, 321)
+player = NodePath("../player")
+
+[connection signal="area_entered" from="enemy" to="enemy" method="_on_area_entered"]
+[connection signal="area_entered" from="enemy2" to="enemy2" method="_on_area_entered"]
+[connection signal="area_entered" from="enemy3" to="enemy3" method="_on_area_entered"]
+[connection signal="area_entered" from="enemy4" to="enemy4" method="_on_area_entered"]
+[connection signal="area_entered" from="enemy5" to="enemy5" method="_on_area_entered"]
+[connection signal="area_entered" from="enemy6" to="enemy6" method="_on_area_entered"]

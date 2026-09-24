@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://utjiyd3x5arl"]
+
+[ext_resource type="Texture2D" uid="uid://b4b6legnp52om" path="res://sprites/shark.jpg" id="1_6rnrt"]
+[ext_resource type="Script" uid="uid://3dfux5iibod7" path="res://Scripts/shark.gd" id="1_ui18s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ui18s"]
+size = Vector2(56, 33)
+
+[node name="Shark" type="Area2D" unique_id=282782806]
+script = ExtResource("1_ui18s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=559526541]
+position = Vector2(0, -1.9999999)
+scale = Vector2(0.09313726, 0.09313726)
+texture = ExtResource("1_6rnrt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1338681356]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_ui18s")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

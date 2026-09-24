@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b30kv6wspal0t"
-path="res://.godot/imported/640x427-Green-Turtle-NOAAFisheries.png-20ae216f48f220fa71a072d6677cffc3.ctex"
+uid="uid://cyfxrygp32f5c"
+path="res://.godot/imported/Turtle_Good.png-39a5ae1800f0331c0ead7bc33d0eb8c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://640x427-Green-Turtle-NOAAFisheries.png"
-dest_files=["res://.godot/imported/640x427-Green-Turtle-NOAAFisheries.png-20ae216f48f220fa71a072d6677cffc3.ctex"]
+source_file="res://sprites/Turtle_Good.png"
+dest_files=["res://.godot/imported/Turtle_Good.png-39a5ae1800f0331c0ead7bc33d0eb8c9.ctex"]
 
 [params]
 
